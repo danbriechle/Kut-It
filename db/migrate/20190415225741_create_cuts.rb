@@ -8,6 +8,6 @@ class CreateCuts < ActiveRecord::Migration[5.2]
       t.integer :thickness
       t.integer :scarf_angle
       t.references :user, foreign_key: true
-    end
+     end
   end
 end
