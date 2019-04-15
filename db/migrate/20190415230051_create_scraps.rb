@@ -1,12 +1,11 @@
-class CreateCuts < ActiveRecord::Migration[5.2]
+class CreateScraps < ActiveRecord::Migration[5.2]
   def change
-    create_table :cuts do |t|
+    create_table :scraps do |t|
       t.string :species
       t.integer :type
       t.integer :length
-      t.integer :height
+      t.integer :width
       t.integer :thickness
-      t.integer :scarf_angle
       t.references :user, foreign_key: true
     end
   end
