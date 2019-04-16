@@ -7,4 +7,6 @@ class Cut < ApplicationRecord
                         :scarf_angle,
                         :drumsize
   belongs_to :user
+
+  enum shell_type: [:ply, :steam]
 end
