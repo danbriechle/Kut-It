@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_021155) do
 
   create_table "cuts", force: :cascade do |t|
     t.string "species"
-    t.integer "type"
+    t.integer "shell_type"
     t.string "length"
     t.string "height"
     t.string "thickness"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_021155) do
 
   create_table "scraps", force: :cascade do |t|
     t.string "species"
-    t.integer "type"
+    t.integer "shell_type"
     t.string "length"
     t.string "width"
     t.string "thickness"
