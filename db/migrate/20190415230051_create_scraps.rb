@@ -3,9 +3,9 @@ class CreateScraps < ActiveRecord::Migration[5.2]
     create_table :scraps do |t|
       t.string :species
       t.integer :type
-      t.integer :length
-      t.integer :width
-      t.integer :thickness
+      t.string :length
+      t.string :width
+      t.string :thickness
       t.references :user, foreign_key: true
     end
   end

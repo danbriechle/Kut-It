@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2019_04_15_230051) do
   create_table "cuts", force: :cascade do |t|
     t.string "species"
     t.integer "type"
-    t.integer "length"
-    t.integer "height"
-    t.integer "thickness"
-    t.integer "scarf_angle"
+    t.string "length"
+    t.string "height"
+    t.string "thickness"
+    t.string "scarf_angle"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_cuts_on_user_id"
   end
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 2019_04_15_230051) do
   create_table "scraps", force: :cascade do |t|
     t.string "species"
     t.integer "type"
-    t.integer "length"
-    t.integer "width"
-    t.integer "thickness"
+    t.string "length"
+    t.string "width"
+    t.string "thickness"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_scraps_on_user_id"
   end
