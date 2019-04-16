@@ -10,9 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_04_15_230051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "cuts", force: :cascade do |t|
+    t.string "species"
+    t.integer "type"
+    t.integer "length"
+    t.integer "height"
+    t.integer "thickness"
+    t.integer "scarf_angle"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_cuts_on_user_id"
+  end
+
+  create_table "scraps", force: :cascade do |t|
+    t.string "species"
+    t.integer "type"
+    t.integer "length"
+    t.integer "width"
+    t.integer "thickness"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_scraps_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "workspace"
+  end
+
+  add_foreign_key "cuts", "users"
+  add_foreign_key "scraps", "users"
 end
