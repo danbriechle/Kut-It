@@ -4,6 +4,7 @@ class Cut < ApplicationRecord
                         :length,
                         :height,
                         :thickness,
-                        :scarf_angle
+                        :scarf_angle,
+                        :drumsize
   belongs_to :user
 end
