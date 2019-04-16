@@ -1,6 +1,6 @@
 class Cut < ApplicationRecord
   validates_presence_of :species,
-                        :type,
+                        :shell_type,
                         :length,
                         :height,
                         :thickness,

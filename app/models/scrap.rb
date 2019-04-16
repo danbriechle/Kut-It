@@ -1,6 +1,6 @@
 class Scrap < ApplicationRecord
   validates_presence_of :species,
-                        :type,
+                        :shell_type,
                         :length,
                         :width,
                         :thickness
