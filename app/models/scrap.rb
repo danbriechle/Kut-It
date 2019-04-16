@@ -5,4 +5,6 @@ class Scrap < ApplicationRecord
                         :width,
                         :thickness
   belongs_to :user
+
+  enum shell_type: [:ply, :steam]
 end
