@@ -10,7 +10,7 @@ describe 'as a user' do
 
       click_on 'Demo Our App'
 
-      expect(current_path).to eq ('/guest')
+      expect(current_path).to eq ('/woodshop')
     end
   end
 end
