@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+  font-family: "Courier New", courier;
+  background-image: url("Background.jpg");
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+ }
