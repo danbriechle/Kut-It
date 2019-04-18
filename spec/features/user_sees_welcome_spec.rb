@@ -9,7 +9,7 @@ describe 'as a user' do
       visit "/"
 
       expect(page).to have_content("Welcome to Kut it!")
-      expect(page).to have_button("login")
+      expect(page).to have_link("Demo Our App")
     end
   end
 end
