@@ -1,3 +1,4 @@
+require 'rails_helper'
 describe 'as a user' do
   context 'when i visit the root' do
     it 'sees welcome message' do
