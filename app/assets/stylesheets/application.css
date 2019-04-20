@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* welcome page styling  */
+ body{
+  font-family: "Courier New", courier;
+  background-image: url("Background.jpg");
+  background-color: #E3E3E3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  color: #1F1300;
+ }
+
+ .info{
+   margin-top: 140px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ .welcome{
+  width: 300px;
+  height: 400px;
+  background-color: #E3E3E3;
+  opacity: .7;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+ }
+
+ .about{
+  size: 12px;
+  margin-bottom: 20px;
+ }
+
+ .navButton{
+   width: 60px;
+   height: 20px;
+   text-decoration: none;
+   background-color: #EDC384;
+   border-radius: 4px;
+ }
