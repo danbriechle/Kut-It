@@ -1,12 +1,11 @@
 <nav>
   <div id="left">
-    <div></div>
-
+    <h1><%= @current_user.workspace %></h1>
   </div>
 
   <div id="right">
     <div><%= link_to 'Ply Calculator', "/ply", class: 'navButton' %></div>
     <div><%= link_to 'Scarf Calculator', "/scarf", class: 'navButton' %></div>
   </div>
-  
+
 </nav>
