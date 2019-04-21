@@ -18,3 +18,13 @@
   <% end %>
   </div>
 </div>
+
+<div id="cut_list">
+  <% @current_user.cuts.each do |cut| %>
+  <div id="cut_info">
+  <div>Species: <%= cut.species %></div>
+  <div>Dimensions: <%= cut.length %>x<%= cut.height %></div>
+  <div>Drumsize: <%= cut.drumsize %> </div>
+  <% end %>
+  </div>
+</div>
