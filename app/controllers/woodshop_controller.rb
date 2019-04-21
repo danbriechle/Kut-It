@@ -1,5 +1,5 @@
 class WoodshopController < ApplicationController
   def index
-    @current_user = User.find(session[:user_id])
+    @current_user = current_user
   end
 end
