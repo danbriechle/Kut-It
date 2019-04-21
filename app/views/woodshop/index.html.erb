@@ -7,5 +7,21 @@
     <div><%= link_to 'Ply Calculator', "/ply", class: 'navButton' %></div>
     <div><%= link_to 'Scarf Calculator', "/scarf", class: 'navButton' %></div>
   </div>
-
 </nav>
+
+<section>
+  <div id="cut_list">
+    <h1> Cut List</h1>
+    <% @current_user.cuts.each do |cut| %>
+    <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"</div>
+    <% end %>
+  </div>
+  
+  <div id="scraps">
+    <h1> Scraps</h1>
+    <% @current_user.scraps.each do |scrap| %>
+    <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
+    <% end %>
+  </div>
+
+</section>
