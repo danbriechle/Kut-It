@@ -9,22 +9,19 @@
   </div>
 </nav>
 
-<div id="scraps">
-  <% @current_user.scraps.each do |scrap| %>
-  <div id="scrap_info">
-  <div>Species: <%= scrap.species %></div>
-  <div>Size: <%= scrap.length %>x<%= scrap.width %></div>
-  <div>Thickness: <%= scrap.thickness %> </div>
-  <% end %>
+<section>
+  <div id="cut_list">
+    <h1> Cut List</h1>
+    <% @current_user.cuts.each do |cut| %>
+    <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"</div>
+    <% end %>
   </div>
-</div>
+  
+  <div id="scraps">
+    <h1> Scraps</h1>
+    <% @current_user.scraps.each do |scrap| %>
+    <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
+    <% end %>
+  </div>
 
-<div id="cut_list">
-  <% @current_user.cuts.each do |cut| %>
-  <div id="cut_info">
-  <div>Species: <%= cut.species %></div>
-  <div>Dimensions: <%= cut.length %>x<%= cut.height %></div>
-  <div>Drumsize: <%= cut.drumsize %> </div>
-  <% end %>
-  </div>
-</div>
+</section>
