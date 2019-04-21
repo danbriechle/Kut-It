@@ -6,8 +6,8 @@ describe 'as a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_1)
 
       visit "/woodshop"
-     save_and_open_page
-      within ".nav" do
+
+      within "#right" do
         expect(page).to have_link("Ply Calculator")
         expect(page).to have_link("Scarf Calculator")
       end
