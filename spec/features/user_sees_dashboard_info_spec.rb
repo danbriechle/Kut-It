@@ -25,6 +25,12 @@ describe 'as a user' do
         expect(page).to have_content("Cherry")
         expect(page).to have_content("Rosewood")
       end
+
+      within "#cut_list" do
+        expect(page).to have_content("10x6")
+        expect(page).to have_content("Mahogany")
+        expect(page).to have_content("Rosewood")
+      end
     end
   end
 end
