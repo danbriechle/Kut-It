@@ -16,12 +16,11 @@
     <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"</div>
     <% end %>
   </div>
-  
+
   <div id="scraps">
     <h1> Scraps</h1>
     <% @current_user.scraps.each do |scrap| %>
     <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
     <% end %>
   </div>
-
 </section>
