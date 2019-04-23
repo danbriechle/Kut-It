@@ -23,7 +23,7 @@
       <% unless @solid.nil? %>
       <p>Your dimensions are: <%=@solid.length%>"x<%=@solid.width%>"</p>
       <%= button_to( "Add to cut list", :action => "create",
-                                        shell_type: :solid,
+                                        shell_type: :steam,
                                         length: @solid.length ,
                                         height: @solid.width,
                                         drumsize: @solid.size,

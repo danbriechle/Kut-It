@@ -25,7 +25,7 @@ describe 'as a user' do
       diameter = "14"
       depth = "8"
       scarf_length = "2"
-      species = "Maple"
+      species = "Bubinga"
       thickness = "1/8"
 
       fill_in 'solid_diameter', with: diameter
@@ -40,6 +40,16 @@ describe 'as a user' do
 
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
       expect(page).to have_button("Add to cut list")
+
+      click_on "Add to cut list"
+
+      expect(current_path).to eq('/woodshop')
+
+      within '#cut_list' do
+        expect(page).to have_content("14X8")
+        expect(page).to have_content("Bubinga")
+        expect(page).to have_content("#{length}x#{width}")
+      end
     end
   end
 end
