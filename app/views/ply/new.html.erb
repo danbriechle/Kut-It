@@ -1,6 +1,8 @@
 <%= form_for :ply, url: { action: :create }, method: :post do |f| %>
-<%= f.label :size %>
-<%= f.text_field :size %>
+<%= f.label :diameter %>
+<%= f.text_field :diameter %>
+<%= f.label :depth %>
+<%= f.text_field :depth %>
 <%= f.label :species %>
 <%= f.text_field :species %>
 <%= f.label :thickness %>
@@ -9,5 +11,5 @@
 <% end %>
 
 <% unless @ply.nil? %>
-<p>"Your dimensions are:<%= @ply.dimensions %></p>
+<p>"Your dimensions are: <%= @ply.dimensions %>"</p>
 <% end %>
