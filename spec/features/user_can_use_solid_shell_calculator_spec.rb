@@ -35,7 +35,7 @@ describe 'as a user' do
       fill_in 'solid_scarf_length', with: scarf_length
       click_on 'Calculate'
 
-      length = '46"'
+      length = '48"'
       width = '10"'
 
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
