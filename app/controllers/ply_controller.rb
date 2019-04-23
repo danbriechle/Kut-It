@@ -4,6 +4,7 @@ class PlyController < ApplicationController
 
   def new
     @ply = Ply.new(ply_params)
+    binding.pry
     render :index
   end
 

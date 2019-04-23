@@ -7,3 +7,7 @@
 <%= f.text_field :thickness %>
 <%= f.submit 'Calculate'%>
 <% end %>
+
+<% unless @ply.nil? %>
+<p>"Your dimensions are:<%= @ply.dimensions %></p>
+<% end %>

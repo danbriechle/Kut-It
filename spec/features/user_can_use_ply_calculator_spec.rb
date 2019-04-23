@@ -23,7 +23,6 @@ describe 'as a user' do
 
       # As a user when I click the ply calculator on I am taken to the ply calculator form.
       expect(current_path).to eq(ply_path)
-      save_and_open_page
       size = "14X8"
       species = "Maple"
       thickness = "1/8"
