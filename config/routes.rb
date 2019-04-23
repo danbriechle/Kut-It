@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get 'ply/new', to: "ply#new"
   post 'ply', to: "ply#create"
 
+  get 'solid/new', to: "solid#new"
+
   post 'cut', to: "cut#create"
 end
