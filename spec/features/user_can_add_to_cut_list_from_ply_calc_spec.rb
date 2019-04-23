@@ -19,7 +19,7 @@ describe 'as a user' do
 
       expect(current_path).to eq('/woodshop')
 
-      click_on 'Ply Calculator'
+      click_on 'Ply Shell Calculator'
 
 
       expect(current_path).to eq(ply_new_path)

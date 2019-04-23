@@ -19,7 +19,7 @@ describe 'as a user' do
 
       expect(current_path).to eq('/woodshop')
 
-      click_on 'Ply Calculator'
+      click_on 'Ply Shell Calculator'
 
       expect(current_path).to eq(ply_new_path)
       diameter = "14"
@@ -35,7 +35,7 @@ describe 'as a user' do
 
       length = '46"'
       width = '10"'
-      
+
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
       expect(page).to have_button("Add to cut list")
     end
