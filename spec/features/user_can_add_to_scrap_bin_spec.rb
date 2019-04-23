@@ -21,7 +21,7 @@ describe 'as a user' do
 
       # As a user when I am on my dashboard I see a button on top of the scrap bin that says add scraps.
       within '#scraps' do
-        expect(page).to have_button('Add Scrap')
+        expect(page).to have_link('Add Scrap')
       end
 
       click_on 'Add Scrap'
