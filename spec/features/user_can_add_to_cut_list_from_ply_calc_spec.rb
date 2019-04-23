@@ -21,10 +21,11 @@ describe 'as a user' do
 
       click_on 'Ply Calculator'
 
+
       expect(current_path).to eq(ply_new_path)
-      diameter = "14"
-      depth = "8"
-      species = "Maple"
+      diameter = "18"
+      depth = "12"
+      species = "Marble Wood"
       thickness = "1/8"
 
       fill_in 'ply_diameter', with: diameter
@@ -33,11 +34,21 @@ describe 'as a user' do
       fill_in 'ply_thickness', with: thickness
       click_on 'Calculate'
 
-      length = '46"'
-      width = '10"'
-      
+      length = '58"'
+      width  = '14"'
+
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
       expect(page).to have_button("Add to cut list")
+
+      click_on 'Add to cut list'
+
+      expect(current_path).to eq('/woodshop')
+
+      within '#cut_list' do
+        expect(page).to have_content("18X12")
+        expect(page).to have_content("Marble Wood")
+        expect(page).to have_content("#{length}x#{width}")
+      end
     end
   end
 end

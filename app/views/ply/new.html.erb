@@ -18,13 +18,19 @@
       <li><%= f.text_field :thickness, placeholder: "Thickness"%></li>
       <li><%= f.submit 'Calculate'%></li>
     <% end %>
+    <div class="list_submit">
+      <% unless @ply.nil? %>
+      <p>Your dimensions are: <%=@ply.length%>"x<%=@ply.width%>"</p>
+      <%= button_to( "Add to cut list", :action => "create",
+                                        shell_type: :ply,
+                                        length: @ply.length ,
+                                        height: @ply.width,
+                                        drumsize: @ply.size,
+                                        thickness: @ply.thickness,
+                                        species: @ply.species,
+                                        scarf_angle: "90",
+                                        :controller => "cut")  %>
+      <% end %>
+    </div>
     </div>
 </section>
-
-
-<div class="list_submit">
-  <% unless @ply.nil? %>
-  <p>"Your dimensions are: <%= @ply.dimensions %>"</p>
-  <%= button_to 'Add to cut list' %>
-  <% end %>
-</div>
