@@ -1,0 +1,9 @@
+<%= form_for :ply, url: { action: :new }, method: :get do |f| %>
+<%= f.label :size %>
+<%= f.text_field :size %>
+<%= f.label :species %>
+<%= f.text_field :species %>
+<%= f.label :thickness %>
+<%= f.text_field :thickness %>
+<%= f.submit 'Calculate'%>
+<% end %>
