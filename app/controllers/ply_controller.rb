@@ -1,10 +1,10 @@
 class PlyController < ApplicationController
-  def index
+  def new
   end
 
-  def new
+  def create
     @ply = Ply.new(ply_params)
-    render :index
+    render :new
   end
 
   private

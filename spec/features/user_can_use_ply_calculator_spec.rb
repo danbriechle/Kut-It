@@ -22,7 +22,7 @@ describe 'as a user' do
       click_on 'Ply Calculator'
 
       # As a user when I click the ply calculator on I am taken to the ply calculator form.
-      expect(current_path).to eq(ply_path)
+      expect(current_path).to eq(ply_new_path)
       size = "14X8"
       species = "Maple"
       thickness = "1/8"

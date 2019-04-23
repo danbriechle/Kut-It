@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   get '/woodshop', to: "woodshop#index"
 
-  get '/ply', to: "ply#index"
   get 'ply/new', to: "ply#new"
+  post 'ply', to: "ply#create"
 end

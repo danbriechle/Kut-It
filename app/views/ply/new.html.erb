@@ -1,4 +1,4 @@
-<%= form_for :ply, url: { action: :new }, method: :get do |f| %>
+<%= form_for :ply, url: { action: :create }, method: :post do |f| %>
 <%= f.label :size %>
 <%= f.text_field :size %>
 <%= f.label :species %>
