@@ -8,6 +8,7 @@ class Ply
   end
 
   def ply_dimensions(size)
+    x = size.scan(/(\d*)([X])(\d*)/)
     binding.pry
   end
 end
