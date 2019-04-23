@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'as a user' do
-  context 'when i visit the ply calculator' do
-    it 'can calculate ply size' do
+  context 'when i visit the solid shell calculator' do
+    it 'can calculate solid shell size' do
       user_1 = User.create!(name: "Dan Briechle", workspace: "Briechle Custom Drums")
       scrap_1 = Scrap.create!(species: "Alder", shell_type: 0, length: "46", width: "3", thickness: "3/4", user: user_1)
       scrap_2 = Scrap.create!(species: "Birch", shell_type: 0, length: "36", width: "8", thickness: "5/8", user: user_1)
@@ -19,34 +19,35 @@ describe 'as a user' do
 
       expect(current_path).to eq('/woodshop')
 
-      click_on 'Ply Shell Calculator'
+      click_on 'Solid Shell Calculator'
 
-
-      expect(current_path).to eq(ply_new_path)
-      diameter = "18"
-      depth = "12"
-      species = "Marble Wood"
+      expect(current_path).to eq(solid_new_path)
+      diameter = "14"
+      depth = "8"
+      scarf_length = "2"
+      species = "Bubinga"
       thickness = "1/8"
 
-      fill_in 'ply_diameter', with: diameter
-      fill_in 'ply_depth', with: depth
-      fill_in 'ply_species', with: species
-      fill_in 'ply_thickness', with: thickness
+      fill_in 'solid_diameter', with: diameter
+      fill_in 'solid_depth', with: depth
+      fill_in 'solid_species', with: species
+      fill_in 'solid_thickness', with: thickness
+      fill_in 'solid_scarf_length', with: scarf_length
       click_on 'Calculate'
 
-      length = '58"'
-      width  = '14"'
+      length = '48"'
+      width = '10"'
 
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
       expect(page).to have_button("Add to cut list")
 
-      click_on 'Add to cut list'
+      click_on "Add to cut list"
 
       expect(current_path).to eq('/woodshop')
 
       within '#cut_list' do
-        expect(page).to have_content("18X12")
-        expect(page).to have_content("Marble Wood")
+        expect(page).to have_content("14X8")
+        expect(page).to have_content("Bubinga")
         expect(page).to have_content("#{length}x#{width}")
       end
     end

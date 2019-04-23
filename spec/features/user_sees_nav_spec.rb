@@ -13,8 +13,8 @@ describe 'as a user' do
       expect(current_path).to eq ('/woodshop')
 
       within "#right" do
-        expect(page).to have_link("Ply Calculator")
-        expect(page).to have_link("Scarf Calculator")
+        expect(page).to have_link("Ply Shell Calculator")
+        expect(page).to have_link("Solid Shell Calculator")
       end
 
       within "#left" do

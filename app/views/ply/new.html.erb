@@ -5,12 +5,12 @@
 
   <div id="right">
     <div><%= link_to 'Woodshop', "/woodshop", class: 'navButton' %></div>
-    <div><%= link_to 'Scarf Calculator', "/scarf/new", class: 'navButton' %></div>
+    <div><%= link_to 'Solid Shell Calculator', "/solid/new", class: 'navButton' %></div>
   </div>
 </nav>
 <section>
   <div class="form">
-    <h1>Ply Cut Size Calculator</h1>
+    <h1>Ply Shell Cut Size Calculator</h1>
     <%= form_for :ply, url: { action: :create }, method: :post do |f| %>
       <li><%= f.number_field :diameter, placeholder: "Diameter" %></li>
       <li><%= f.number_field :depth, placeholder: "Depth" %></li>

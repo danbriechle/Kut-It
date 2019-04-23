@@ -4,8 +4,8 @@
   </div>
 
   <div id="right">
-    <div><%= link_to 'Ply Calculator', "/ply/new", class: 'navButton' %></div>
-    <div><%= link_to 'Scarf Calculator', "/scarf/new", class: 'navButton' %></div>
+    <div><%= link_to 'Ply Shell Calculator', "/ply/new", class: 'navButton' %></div>
+    <div><%= link_to 'Solid Shell Calculator', "/solid/new", class: 'navButton' %></div>
   </div>
 </nav>
 
@@ -13,7 +13,7 @@
   <div id="cut_list">
     <h1> Cut List</h1>
     <% @current_user.cuts.each do |cut| %>
-    <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"</div>
+      <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°</div>
     <% end %>
   </div>
 
