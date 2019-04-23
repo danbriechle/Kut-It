@@ -22,14 +22,15 @@ describe 'as a user' do
       click_on 'Ply Calculator'
 
       # As a user when I click the ply calculator on I am taken to the ply calculator form.
-      expect(current_path).to eq('ply_path')
-      diameter = "14X8"
+      expect(current_path).to eq(ply_path)
+      save_and_open_page
+      size = "14X8"
       species = "Maple"
       thickness = "1/8"
       # I input the size of the drum, the species of the wood the thickness of the material.
-      fillin 'size', with: size
-      fillin 'species', with: species
-      fillin 'thickness', with: thickness
+      fill_in 'ply_size', with: size
+      fill_in 'ply_species', with: species
+      fill_in 'ply_thickness', with: thickness
       click_on 'Calculate'
       # When I click calculate I am given back the cut dimensions for the veneer.
       expect(page).to have_content("Your dimensions are: 46x10")
