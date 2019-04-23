@@ -21,7 +21,7 @@
     <div class="list_submit">
       <% unless @ply.nil? %>
       <p>Your dimensions are: <%=@ply.length%>"x<%=@ply.width%>"</p>
-      <%= button_to 'Add to cut list' %>
+      <%= button_to( "Add to cut list", :action => "create", :controller => "cut")  %>
       <% end %>
     </div>
     </div>
