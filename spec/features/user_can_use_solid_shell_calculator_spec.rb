@@ -27,15 +27,17 @@ describe 'as a user' do
       scarf_length = "2"
       species = "Bubinga"
       thickness = "1/8"
+      slop = "4"
 
       fill_in 'solid_diameter', with: diameter
       fill_in 'solid_depth', with: depth
       fill_in 'solid_species', with: species
       fill_in 'solid_thickness', with: thickness
       fill_in 'solid_scarf_length', with: scarf_length
+      fill_in 'solid_slop', with: slop
       click_on 'Calculate'
 
-      length = '48"'
+      length = '49"'
       width = '10"'
 
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
