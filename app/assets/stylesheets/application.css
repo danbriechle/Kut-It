@@ -88,8 +88,8 @@
 
  #cut_list{
    margin: 20px;
-   width: 300px;
-   height: 200px;
+   width: 400px;
+   height: 600px;
    background-color: #E3E3E3;
    border-radius: 4px;
    opacity: .7;
@@ -97,12 +97,13 @@
    flex-direction: column;
    justify-content: flex-start;
    text-align: center;
+   text-overflow: scroll;
  }
 
  #scraps{
    margin: 20px;
-   width: 300px;
-   height: 200px;
+   width: 400px;
+   height: 600px;
    background-color: #E3E3E3;
    border-radius: 4px;
    opacity: .7;
@@ -110,6 +111,7 @@
    flex-direction: column;
    justify-content: flex-start;
    text-align: center;
+   text-overflow: scroll;
  }
 
  .form{
