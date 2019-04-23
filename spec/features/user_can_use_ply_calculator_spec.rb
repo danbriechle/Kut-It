@@ -33,9 +33,13 @@ describe 'as a user' do
       fill_in 'ply_species', with: species
       fill_in 'ply_thickness', with: thickness
       click_on 'Calculate'
+
+      length = '46"'
+      width = '10"'
       # When I click calculate I am given back the cut dimensions for the veneer.
-      expect(page).to have_content("Your dimensions are: 46X10")
+      expect(page).to have_content("Your dimensions are: #{length}x#{width}")
       expect(page).to have_button("Add to cut list")
+      
     end
   end
 end
