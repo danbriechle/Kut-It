@@ -18,13 +18,11 @@
       <li><%= f.text_field :thickness, placeholder: "Thickness"%></li>
       <li><%= f.submit 'Calculate'%></li>
     <% end %>
+    <div class="list_submit">
+      <% unless @ply.nil? %>
+      <p>"Your dimensions are: <%= @ply.dimensions %>"</p>
+      <%= button_to 'Add to cut list' %>
+      <% end %>
+    </div>
     </div>
 </section>
-
-
-<div class="list_submit">
-  <% unless @ply.nil? %>
-  <p>"Your dimensions are: <%= @ply.dimensions %>"</p>
-  <%= button_to 'Add to cut list' %>
-  <% end %>
-</div>
