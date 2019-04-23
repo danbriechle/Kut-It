@@ -12,6 +12,6 @@ class PlyController < ApplicationController
   private
 
   def ply_params
-    params.require(:ply).permit(:diameter, :depth, :species, :thickness)
+    params.require(:ply).permit(:diameter, :depth, :species, :thickness, :slop)
   end
 end
