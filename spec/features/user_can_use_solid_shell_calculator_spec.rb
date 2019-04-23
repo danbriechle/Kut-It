@@ -37,7 +37,7 @@ describe 'as a user' do
       fill_in 'solid_slop', with: slop
       click_on 'Calculate'
 
-      length = '49"'
+      length = '50"'
       width = '10"'
 
       expect(page).to have_content("Your dimensions are: #{length}x#{width}")
