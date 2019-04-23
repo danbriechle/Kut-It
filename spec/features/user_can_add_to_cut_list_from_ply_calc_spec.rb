@@ -27,11 +27,13 @@ describe 'as a user' do
       depth = "12"
       species = "Marble Wood"
       thickness = "1/8"
+      slop = "0"
 
       fill_in 'ply_diameter', with: diameter
       fill_in 'ply_depth', with: depth
       fill_in 'ply_species', with: species
       fill_in 'ply_thickness', with: thickness
+      fill_in 'ply_slop', with: slop
       click_on 'Calculate'
 
       length = '58"'
