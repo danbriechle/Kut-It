@@ -23,8 +23,11 @@ To setup on a local machine please find an appropriate directory and clone down 
 the following commands. Note: it uses Ruby version 2.4.5 and Rails version 5.2.3.
 
 git clone git@github.com:danbriechle/Kut-It.git
+
 cd kut-it
+
 bundle
+
 rake db:{create,migrate,seed}
 
 Once these are ready you can run the server:
