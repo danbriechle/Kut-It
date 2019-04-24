@@ -18,7 +18,6 @@ describe 'as a user' do
       click_on 'Demo Our App'
 
       expect(current_path).to eq('/woodshop')
-      save_and_open_page
 
       within "#cut-#{cut_1.id}" do
         expect(page).to have_link("Finished")

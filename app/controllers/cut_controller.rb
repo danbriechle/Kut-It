@@ -11,6 +11,10 @@ class CutController < ApplicationController
     end
   end
 
+  def delete
+    binding.pry
+  end
+
   private
 
   def cut_params
