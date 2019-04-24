@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   get 'scrap/new', to: "scrap#new"
   post'scrap', to: "scrap#create"
+  delete 'scrap/:id', to: "scrap#delete"
 end
