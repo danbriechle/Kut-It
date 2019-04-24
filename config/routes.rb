@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   post 'solid', to: "solid#create"
 
   post 'cut', to: "cut#create"
+  delete 'cut/:id', to: "cut#delete"
 
   get 'scrap/new', to: "scrap#new"
   post'scrap', to: "scrap#create"
+  delete 'scrap/:id', to: "scrap#delete"
 end

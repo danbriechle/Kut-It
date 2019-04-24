@@ -9,6 +9,7 @@
     <div><%= link_to 'Ply Shell Calculator', "/ply/new", class: 'navButton' %></div>
   </div>
 </nav>
+
 <section>
   <div class="form">
     <h1>Scrap Bin</h1>
@@ -18,8 +19,7 @@
       <li><%= f.number_field :thickness, placeholder: "thickness" %></li>
       <li><%= f.text_field :species, placeholder: "Species" %></li>
       <li><%= f.select(:shell_type, [['Ply', 'ply'], ['Solid', 'steam']]) %></li>
-      <li><%= f.submit 'Add Scrap'%></li>
+      <li><%= f.submit 'Add Scrap', class: 'newButton'%></li>
     <% end %>
-    <div class="list_submit">
-
+  </div>
 </section>

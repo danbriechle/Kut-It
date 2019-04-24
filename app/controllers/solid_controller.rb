@@ -14,4 +14,5 @@ class SolidController < ApplicationController
   def solid_params
     params.require(:solid).permit(:diameter, :depth, :species, :thickness, :scarf_length, :slop)
   end
+  
 end

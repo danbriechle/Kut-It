@@ -1,5 +1,7 @@
 class Ply
+
   attr_reader :species, :thickness, :size, :diameter, :depth, :length, :width ,:slop
+  
   def initialize(ply_params)
     @species = ply_params[:species]
     @thickness = ply_params[:thickness]

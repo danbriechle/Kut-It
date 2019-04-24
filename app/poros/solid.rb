@@ -1,5 +1,7 @@
 class Solid
+
   attr_reader :species, :thickness, :size, :diameter, :depth, :length, :width, :scarf_length, :slop
+  
   def initialize(solid_params)
     @species = solid_params[:species]
     @thickness = solid_params[:thickness]

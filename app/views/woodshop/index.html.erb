@@ -11,17 +11,27 @@
 
 <section>
   <div id="cut_list">
-    <h1> Cut List</h1>
-    <% @current_user.cuts.each do |cut| %>
-      <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°</div>
+    <h1> Cut List </h1>
+    <% unless @current_user.cuts.first == nil %>
+      <% @current_user.cuts.each do |cut| %>
+        <div class= "cut" id="cut-<%= cut.id %>">
+          <%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°
+          <%= link_to "Finished", "/cut/#{cut.id}", method: :delete , class: 'delButton' %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
   <div id="scraps">
-    <h1> Scraps</h1>
-    <% @current_user.scraps.each do |scrap| %>
-    <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
+    <h1> Scraps </h1>
+    <% unless @current_user.scraps.first == nil %>
+      <% @current_user.scraps.each do |scrap| %>
+      <div class= "scrap" id="scrap-<%= scrap.id %>">
+        <%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"
+        <%= link_to "Toss it", "/scrap/#{scrap.id}", method: :delete , class: 'delButton' %>
+      </div>
+      <% end %>
     <% end %>
-    <div><%= link_to 'Add Scrap', "/scrap/new", class: 'navButton' %></div>
+    <div id="add_scrap"><%= link_to 'Add Scrap', "/scrap/new", class: 'navButton' %></div>
   </div>
 </section>

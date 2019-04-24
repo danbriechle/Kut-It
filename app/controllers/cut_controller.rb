@@ -1,5 +1,4 @@
 class CutController < ApplicationController
-
   def create
     @current_user = current_user
     cut = current_user.cuts.create(cut_params)
@@ -9,6 +8,13 @@ class CutController < ApplicationController
       flash[:error] = "We're sorry this could not be added to your cut list"
       redirect_to woodshop_path
     end
+  end
+
+  def delete
+    @current_user = current_user
+    cut = current_user.cuts.find(params[:id]).destroy
+    flash[:success]= "#{cut.drumsize} #{cut.species} complete!"
+    redirect_to woodshop_path
   end
 
   private
