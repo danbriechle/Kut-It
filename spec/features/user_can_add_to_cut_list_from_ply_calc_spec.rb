@@ -51,6 +51,27 @@ describe 'as a user' do
         expect(page).to have_content("Marble Wood")
         expect(page).to have_content("#{length}x#{width}")
       end
+
+      click_on 'Ply Shell Calculator'
+
+
+      expect(current_path).to eq(ply_new_path)
+
+      depth = "12"
+      slop = "0"
+
+
+      fill_in 'ply_depth', with: depth
+      fill_in 'ply_slop', with: slop
+      click_on 'Calculate'
+
+
+      expect(page).to have_button("Add to cut list")
+
+      click_on 'Add to cut list'
+
+      expect(current_path).to eq(woodshop_path)
+      expect(page).to have_content("We're sorry this could not be added to your cut list")
     end
   end
 end
