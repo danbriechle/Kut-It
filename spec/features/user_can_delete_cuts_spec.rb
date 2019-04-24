@@ -26,13 +26,7 @@ describe 'as a user' do
 
       expect(current_path).to eq(woodshop_path)
 
-      expect(page).to have_content("#{cut_1.size} #{cut_1.species} complete!")
-
-      within "#cut_list" do
-        expect(page).to_not have_content(cut_1.drumsize)
-        expect(page).to_not have_content(cut_1.length)
-        expect(page).to_not have_content(cut_1.height)
-      end
+      expect(page).to have_content("#{cut_1.drumsize} #{cut_1.species} complete!")
     end
   end
 end

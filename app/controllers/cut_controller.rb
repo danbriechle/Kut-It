@@ -12,7 +12,10 @@ class CutController < ApplicationController
   end
 
   def delete
-    binding.pry
+    @current_user = current_user
+    cut = current_user.cuts.find(params[:id]).destroy
+    flash[:success]= "#{cut.drumsize} #{cut.species} complete!"
+    redirect_to woodshop_path
   end
 
   private
