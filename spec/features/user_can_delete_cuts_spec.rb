@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'as a user' do
-  context 'when i visit the ply calculator' do
-    it 'can calculate ply size' do
+  context 'when i visit my woodshop' do
+    it 'can delete cut' do
       user_1 = User.create!(name: "Dan Briechle", workspace: "Briechle Custom Drums")
       scrap_1 = Scrap.create!(species: "Alder", shell_type: 0, length: "46", width: "3", thickness: "3/4", user: user_1)
       scrap_2 = Scrap.create!(species: "Birch", shell_type: 0, length: "36", width: "8", thickness: "5/8", user: user_1)
