@@ -4,13 +4,14 @@ class ScrapController < ApplicationController
   end
 
   def create
-    scrap = current_user.scraps.create!(scrap_params)
+    @current_user = current_user
+    scrap = current_user.scraps.create(scrap_params)
     if scrap.save
       flash[:notice] = "#{scrap.species} has been added to the scrap bin"
       redirect_to '/woodshop'
     else
-      render '/new/scrap'
       flash[:error] = "We're sorry this scrap could not be added to the scrap bin"
+      render '/scrap/new'
     end
   end
 

@@ -51,6 +51,24 @@ describe 'as a user' do
       end
 
       expect(page).to have_content("#{species} has been added to the scrap bin")
+
+      click_on 'Add Scrap'
+
+      expect(current_path).to eq(scrap_new_path)
+      width = '14'
+      species = "Marble Wood"
+      thickness = '1/8"'
+
+
+
+      fill_in 'scrap_width', with: width
+      fill_in 'scrap_thickness', with: thickness
+      fill_in 'scrap_species', with: species
+
+
+      click_on 'Add Scrap'
+
+      expect(page).to have_content("We're sorry this scrap could not be added to the scrap bin")
     end
   end
 end
