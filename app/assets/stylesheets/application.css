@@ -131,3 +131,9 @@
    margin: 14px;
    list-style: none;
  }
+
+ .errors{
+   background-color: #E3E3E3;
+   opacity: .9;
+   border-radius: 4px;
+ }

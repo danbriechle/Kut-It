@@ -10,10 +10,12 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag :div, value, class: "flash #{key}" %>
-    <% end %>
-    
+
+    <div class="errors">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
