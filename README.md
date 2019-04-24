@@ -1,13 +1,22 @@
 # Kut It!
 
+<img width="723" alt="Screen Shot 2019-04-24 at 12 32 15 PM" src="https://user-images.githubusercontent.com/42418816/56694449-e9d0fa00-66a3-11e9-986b-e418bcef543e.png">
+
 Kut-It is a cut calculator for drum makers that calculates cut sizes for ply and solid drum shells. Once you calculate a 
 cut, you can store the cut in you cut list. There is also a "scrap bin" where you can log scraps from cuts. Stay sharp with 
-Kut-It! Features:
+Kut-It! 
+
+## Features:
 
 Calculate cut dimensions for ply and single ply shells.
+<img width="1439" alt="Screen Shot 2019-04-24 at 12 30 57 PM" src="https://user-images.githubusercontent.com/42418816/56694585-49c7a080-66a4-11e9-9630-ded320a8b3d1.png">
 Add a margin of error for dificult and unrully woods to your cuts with the "slop" feature.
-Store all your cut dimensions in a cut list.
-Keep track of all of your scraps, cut-offs and drop-cuts with the scrapbin.
+<img width="1439" alt="Screen Shot 2019-04-24 at 12 30 57 PM" src="https://user-images.githubusercontent.com/42418816/56694656-65cb4200-66a4-11e9-9b34-819eabb3b5ed.png">
+Store all your cut dimensions in a cut list. Keep track of all of your scraps, cut-offs and drop-cuts with the scrapbin.
+<img width="1437" alt="Screen Shot 2019-04-24 at 12 30 47 PM" src="https://user-images.githubusercontent.com/42418816/56694683-7e3b5c80-66a4-11e9-830b-f119b3f4c632.png">
+You can even add dimensions directly form either calculator directly to the cut list.
+<img width="302" alt="Screen Shot 2019-04-24 at 12 31 47 PM" src="https://user-images.githubusercontent.com/42418816/56694764-b04cbe80-66a4-11e9-996c-ac7712e16607.png">
+
 
 ## How to Install
 
@@ -54,7 +63,9 @@ To run the full testing suite run this command from the terminal: rspec
 After RSpec has completed, you should see all tests passing as GREEN. Any tests that have failed or thrown an error will 
 display RED. Any tests that have been skipped will be displayed as YELLOW.
 
-Tests Coverage
+## Tests Coverage
+<img width="1105" alt="Screen Shot 2019-04-24 at 12 14 30 PM" src="https://user-images.githubusercontent.com/42418816/56694499-0cfba980-66a4-11e9-9751-a6e2ba7bebcd.png">
+
 Kut-it has 100% coverage on all model & feature testing. Validation and relationship testing was also included in the 
 application. Kut-It also utilize Travis CI for continuous deployment and integration. 
 
