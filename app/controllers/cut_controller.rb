@@ -6,7 +6,7 @@ class CutController < ApplicationController
       redirect_to woodshop_path
     else
       redirect_to ply_new_path
-      @error = "Where sorry this could not be added to your cut list"
+      @error = "We're sorry this could not be added to your cut list"
     end
   end
 
