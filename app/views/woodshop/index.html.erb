@@ -14,7 +14,10 @@
     <h1> Cut List </h1>
     <% unless @current_user.cuts.first == nil %>
       <% @current_user.cuts.each do |cut| %>
-        <div id="cut-<%= cut.id %>"><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°</div>
+        <div id="cut-<%= cut.id %>">
+          <%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°
+          <%= link_to "Finished", '/cut', method: :delete , class: 'navButton' %>
+        </div>
       <% end %>
     <% end %>
   </div>
@@ -23,7 +26,9 @@
     <h1> Scraps </h1>
     <% unless @current_user.cuts.first == nil %>
       <% @current_user.scraps.each do |scrap| %>
-      <div id="scrap-<%= scrap.id %>"><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
+      <div id="scrap-<%= scrap.id %>">
+        <%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"
+      </div>
       <% end %>
     <% end %>
     <div><%= link_to 'Add Scrap', "/scrap/new", class: 'navButton' %></div>
