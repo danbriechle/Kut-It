@@ -10,13 +10,17 @@ Kut-It!
 
 Calculate cut dimensions for ply and single ply shells.
 <img width="1439" alt="Screen Shot 2019-04-24 at 12 30 57 PM" src="https://user-images.githubusercontent.com/42418816/56694585-49c7a080-66a4-11e9-9630-ded320a8b3d1.png">
-Add a margin of error for dificult and unrully woods to your cuts with the "slop" feature.
-<img width="1439" alt="Screen Shot 2019-04-24 at 12 30 57 PM" src="https://user-images.githubusercontent.com/42418816/56694656-65cb4200-66a4-11e9-9b34-819eabb3b5ed.png">
-Store all your cut dimensions in a cut list. Keep track of all of your scraps, cut-offs and drop-cuts with the scrapbin.
+Add a margin of error for dificult and unrully woods to your cuts with the "slop" feature. The solid shell calculator even 
+accounts for scarf length
+<img width="1439" alt="Screen Shot 2019-04-24 at 12 31 07 PM" src="https://user-images.githubusercontent.com/42418816/56694832-d96d4f00-66a4-11e9-90ff-39018f3d85b9.png">
+
+Store all your cut dimensions in a cut list. Keep track of all of your scraps, cut-offs and drop-cuts with the scrap bin.
 <img width="1437" alt="Screen Shot 2019-04-24 at 12 30 47 PM" src="https://user-images.githubusercontent.com/42418816/56694683-7e3b5c80-66a4-11e9-830b-f119b3f4c632.png">
 You can even add dimensions directly form either calculator directly to the cut list.
-<img width="302" alt="Screen Shot 2019-04-24 at 12 31 47 PM" src="https://user-images.githubusercontent.com/42418816/56694764-b04cbe80-66a4-11e9-996c-ac7712e16607.png">
-
+<img width="302" alt="Screen Shot 2019-04-24 at 12 31 47 PM" src="https://user-images.githubusercontent.com/42418816/56695044-687a6700-66a5-11e9-88fe-abf07c67b378.png">
+When you've completed a shell you can select "Finished" to remove it from the cut list. Or when you can't find a reason to 
+keep a scrap you can select "Toss it" to remove it from the scrap bin.
+<img width="1440" alt="Screen Shot 2019-04-24 at 3 25 39 PM" src="https://user-images.githubusercontent.com/42418816/56695148-9b245f80-66a5-11e9-8502-42c3ccad6cdf.png">
 
 ## How to Install
 
