@@ -26,7 +26,7 @@ describe 'as a user' do
 
       expect(current_path).to eq(woodshop_path)
 
-      expect(page).to have_content("#{scrap_1.species} tossed!")
+      expect(page).to have_content("#{scrap_1.species} Tossed!")
     end
   end
 end

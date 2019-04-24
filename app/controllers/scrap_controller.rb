@@ -15,6 +15,13 @@ class ScrapController < ApplicationController
     end
   end
 
+  def delete
+    @current_user = current_user
+    scrap = current_user.scraps.find(params[:id]).destroy
+    flash[:success]= "#{scrap.species} Tossed!"
+    redirect_to woodshop_path
+  end
+
   private
 
   def scrap_params
