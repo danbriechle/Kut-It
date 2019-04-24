@@ -13,14 +13,14 @@
   <div id="cut_list">
     <h1> Cut List</h1>
     <% @current_user.cuts.each do |cut| %>
-      <div><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°</div>
+      <div id="cut-<%= cut.id %>"><%= cut.drumsize %> <%= cut.species %> <%= cut.length %>"x<%= cut.height %>"x<%= cut.scarf_angle%>°</div>
     <% end %>
   </div>
 
   <div id="scraps">
     <h1> Scraps</h1>
     <% @current_user.scraps.each do |scrap| %>
-    <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
+    <div id="scrap-<%= scrap.id %>"><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
     <% end %>
     <div><%= link_to 'Add Scrap', "/scrap/new", class: 'navButton' %></div>
   </div>
