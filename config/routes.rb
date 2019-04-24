@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   post 'cut', to: "cut#create"
 
   get 'scrap/new', to: "scrap#new"
+  post'scrap', to: "scrap#create"
 end
