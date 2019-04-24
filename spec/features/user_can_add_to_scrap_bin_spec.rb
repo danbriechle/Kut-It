@@ -38,8 +38,9 @@ describe 'as a user' do
       fill_in 'scrap_width', with: width
       fill_in 'scrap_thickness', with: thickness
       fill_in 'scrap_species', with: species
+      select "Ply", :from => "scrap_shell_type"
       # When I input good information, select the type of drum and click submit
-      click_on 'Add to scrap bin'
+      click_on 'Add Scrap'
 
       expect(current_path).to eq('/woodshop')
 
