@@ -28,6 +28,7 @@
       <% @current_user.scraps.each do |scrap| %>
       <div id="scrap-<%= scrap.id %>">
         <%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"
+        <%= link_to "Toss it", "/scrap/#{scrap.id}", method: :delete , class: 'navButton' %>
       </div>
       <% end %>
     <% end %>
