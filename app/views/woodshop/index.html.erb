@@ -22,5 +22,6 @@
     <% @current_user.scraps.each do |scrap| %>
     <div><%= scrap.species %> <%= scrap.length %>"x<%= scrap.width %>"x<%= scrap.thickness %>"</div>
     <% end %>
+    <div><%= link_to 'Add Scrap', "/scrap/new", class: 'navButton' %></div>
   </div>
 </section>

@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'as a user' do
-  context 'when i visit the ply calculator' do
-    it 'can calculate ply size' do
+  context 'when i visit my wood shop' do
+    it 'can add scraps to the scrap bin' do
       user_1 = User.create!(name: "Dan Briechle", workspace: "Briechle Custom Drums")
       scrap_1 = Scrap.create!(species: "Alder", shell_type: 0, length: "46", width: "3", thickness: "3/4", user: user_1)
       scrap_2 = Scrap.create!(species: "Birch", shell_type: 0, length: "36", width: "8", thickness: "5/8", user: user_1)
@@ -19,59 +19,56 @@ describe 'as a user' do
 
       expect(current_path).to eq('/woodshop')
 
-      click_on 'Ply Shell Calculator'
-
-
-      expect(current_path).to eq(ply_new_path)
-      diameter = "18"
-      depth = "12"
-      species = "Marble Wood"
-      thickness = "1/8"
-      slop = "0"
-
-      fill_in 'ply_diameter', with: diameter
-      fill_in 'ply_depth', with: depth
-      fill_in 'ply_species', with: species
-      fill_in 'ply_thickness', with: thickness
-      fill_in 'ply_slop', with: slop
-      click_on 'Calculate'
-
-      length = '58"'
-      width  = '14"'
-
-      expect(page).to have_content("Your dimensions are: #{length}x#{width}")
-      expect(page).to have_button("Add to cut list")
-
-      click_on 'Add to cut list'
-
-      expect(current_path).to eq('/woodshop')
-
-      within '#cut_list' do
-        expect(page).to have_content("18X12")
-        expect(page).to have_content("Marble Wood")
-        expect(page).to have_content("#{length}x#{width}")
+      within '#scraps' do
+        expect(page).to have_link('Add Scrap')
       end
 
-      click_on 'Ply Shell Calculator'
+      click_on 'Add Scrap'
+
+      expect(current_path).to eq(scrap_new_path)
+      width = '14'
+      length = '31'
+      species = "Marble Wood"
+      thickness = '1/8"'
 
 
-      expect(current_path).to eq(ply_new_path)
+      fill_in 'scrap_length', with: length
+      fill_in 'scrap_width', with: width
+      fill_in 'scrap_thickness', with: thickness
+      fill_in 'scrap_species', with: species
+      select "Ply", :from => "scrap_shell_type"
 
-      depth = "12"
-      slop = "0"
+      click_on 'Add Scrap'
+
+      expect(current_path).to eq('/woodshop')
+      width_with_inches = '14"'
+      length_with_inches = '31"'
+      thickness_with_inches = '1/8"'
 
 
-      fill_in 'ply_depth', with: depth
-      fill_in 'ply_slop', with: slop
-      click_on 'Calculate'
+      within '#scraps' do
+        expect(page).to have_content("#{species} #{length_with_inches}x#{width_with_inches}x#{thickness_with_inches}")
+      end
+
+      expect(page).to have_content("#{species} has been added to the scrap bin")
+
+      click_on 'Add Scrap'
+
+      expect(current_path).to eq(scrap_new_path)
+      width = '14'
+      species = "Marble Wood"
+      thickness = '1/8"'
 
 
-      expect(page).to have_button("Add to cut list")
 
-      click_on 'Add to cut list'
+      fill_in 'scrap_width', with: width
+      fill_in 'scrap_thickness', with: thickness
+      fill_in 'scrap_species', with: species
 
-      expect(current_path).to eq(woodshop_path)
-      expect(page).to have_content("We're sorry this could not be added to your cut list")
+
+      click_on 'Add Scrap'
+
+      expect(page).to have_content("We're sorry this scrap could not be added to the scrap bin")
     end
   end
 end

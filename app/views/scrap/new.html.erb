@@ -1,0 +1,25 @@
+<nav>
+  <div id="left">
+    <h1><%= @current_user.workspace %></h1>
+  </div>
+
+  <div id="right">
+    <div><%= link_to 'Woodshop', "/woodshop", class: 'navButton' %></div>
+    <div><%= link_to 'Solid Shell Calculator', "/solid/new", class: 'navButton' %></div>
+    <div><%= link_to 'Ply Shell Calculator', "/ply/new", class: 'navButton' %></div>
+  </div>
+</nav>
+<section>
+  <div class="form">
+    <h1>Scrap Bin</h1>
+    <%= form_for :scrap, url: { action: :create }, method: :post do |f| %>
+      <li><%= f.number_field :length, placeholder: "length" %></li>
+      <li><%= f.number_field :width, placeholder: "width" %></li>
+      <li><%= f.number_field :thickness, placeholder: "thickness" %></li>
+      <li><%= f.text_field :species, placeholder: "Species" %></li>
+      <li><%= f.select(:shell_type, [['Ply', 'ply'], ['Solid', 'steam']]) %></li>
+      <li><%= f.submit 'Add Scrap'%></li>
+    <% end %>
+    <div class="list_submit">
+
+</section>
