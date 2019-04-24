@@ -19,13 +19,11 @@ describe 'as a user' do
 
       expect(current_path).to eq('/woodshop')
 
-      # As a user when I am on my dashboard I see a button on top of the scrap bin that says add scraps.
       within '#scraps' do
         expect(page).to have_link('Add Scrap')
       end
 
       click_on 'Add Scrap'
-      # When I click on this button I am taken to the scrap new form with fields for species, and length, width, thickness.
 
       expect(current_path).to eq(scrap_new_path)
       width = '14'
@@ -39,7 +37,7 @@ describe 'as a user' do
       fill_in 'scrap_thickness', with: thickness
       fill_in 'scrap_species', with: species
       select "Ply", :from => "scrap_shell_type"
-      # When I input good information, select the type of drum and click submit
+
       click_on 'Add Scrap'
 
       expect(current_path).to eq('/woodshop')
@@ -48,18 +46,11 @@ describe 'as a user' do
       thickness_with_inches = '1/8"'
 
 
-      # I am redirected to the woodshop and I can see my new scrap in the bin.
       within '#scraps' do
         expect(page).to have_content("#{species} #{length_with_inches}x#{width_with_inches}x#{thickness_with_inches}")
       end
 
-      # I see a message that the material was added to the scrap bin.
       expect(page).to have_content("#{species} has been added to the scrap bin")
     end
   end
 end
-
-
-
-
-# If I input incorrect information I see an error message.
