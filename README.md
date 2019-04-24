@@ -1,10 +1,10 @@
-# Kut It!
+# Kut it!
 
 <img width="723" alt="Screen Shot 2019-04-24 at 12 32 15 PM" src="https://user-images.githubusercontent.com/42418816/56694449-e9d0fa00-66a3-11e9-986b-e418bcef543e.png">
 
-Kut-It is a cut calculator for drum makers that calculates cut sizes for ply and solid drum shells. Once you calculate a 
+Kut it is a cut calculator for drum makers that calculates cut sizes for ply and solid drum shells. Once you calculate a 
 cut, you can store the cut in you cut list. There is also a "scrap bin" where you can log scraps from cuts. Stay sharp with 
-Kut-It! 
+Kut it! 
 
 ## Features:
 
@@ -23,7 +23,8 @@ Store all your cut dimensions in a cut list. Keep track of all of your scraps, c
 
 You can even add dimensions directly form either calculator directly to the cut list.
 
-<img width="302" alt="Screen Shot 2019-04-24 at 12 31 47 PM" src="https://user-images.githubusercontent.com/42418816/56695044-687a6700-66a5-11e9-88fe-abf07c67b378.png">
+<img width="292" alt="Screen Shot 2019-04-24 at 3 26 32 PM" src="https://user-images.githubusercontent.com/42418816/56695461-5fd66080-66a6-11e9-913c-18d8d517bbdb.png">
+
 
 When you've completed a shell you can select "Finished" to remove it from the cut list. Or when you can't find a reason to 
 keep a scrap you can select "Toss it" to remove it from the scrap bin.
@@ -54,6 +55,7 @@ rake db:{create,migrate,seed}
 Once these are ready you can run the server:
 
 rails s
+
 Navigate to localhost:3000. The application will load to the page. Enjoy!
 
 ## Testing
