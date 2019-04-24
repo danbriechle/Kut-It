@@ -16,7 +16,7 @@
     <%= form_for :scrap, url: { action: :create }, method: :post do |f| %>
       <li><%= f.number_field :length, placeholder: "length" %></li>
       <li><%= f.number_field :width, placeholder: "width" %></li>
-      <li><%= f.number_field :thickness, placeholder: "thickness" %></li>
+      <li><%= f.text_field :thickness, placeholder: "thickness" %></li>
       <li><%= f.text_field :species, placeholder: "Species" %></li>
       <li><%= f.select(:shell_type, [['Ply', 'ply'], ['Solid', 'steam']]) %></li>
       <li><%= f.submit 'Add Scrap', class: 'newButton'%></li>
