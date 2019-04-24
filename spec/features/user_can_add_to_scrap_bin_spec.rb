@@ -28,8 +28,8 @@ describe 'as a user' do
       # When I click on this button I am taken to the scrap new form with fields for species, and length, width, thickness.
 
       expect(current_path).to eq(scrap_new_path)
-      width = '14"'
-      length = '31"'
+      width = '14'
+      length = '31'
       species = "Marble Wood"
       thickness = '1/8"'
 
@@ -43,12 +43,14 @@ describe 'as a user' do
       click_on 'Add Scrap'
 
       expect(current_path).to eq('/woodshop')
+      width_with_inches = '14"'
+      length_with_inches = '31"'
+      thickness_with_inches = '1/8"'
+
 
       # I am redirected to the woodshop and I can see my new scrap in the bin.
       within '#scraps' do
-        expect(page).to have_content("18X12")
-        expect(page).to have_content("Marble Wood")
-        expect(page).to have_content("#{species} #{length}x#{width}x#{thickness}")
+        expect(page).to have_content("#{species} #{length_with_inches}x#{width_with_inches}x#{thickness_with_inches}")
       end
 
       # I see a message that the material was added to the scrap bin.
