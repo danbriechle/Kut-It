@@ -88,7 +88,7 @@
 
  #cut_list{
    margin: 20px;
-   width: 400px;
+   width: 460px;
    height: 600px;
    background-color: #E3E3E3;
    border-radius: 4px;
@@ -102,7 +102,7 @@
 
  #scraps{
    margin: 20px;
-   width: 400px;
+   width: 460px;
    height: 600px;
    background-color: #E3E3E3;
    border-radius: 4px;
@@ -136,4 +136,46 @@
    background-color: #E3E3E3;
    opacity: .9;
    border-radius: 4px;
+ }
+
+ .scrap{
+   margin: 14px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .cut{
+   margin: 14px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .delButton{
+   width: 80px;
+   height: 20px;
+   margin-right: 12px;
+   padding: 4px;
+   text-decoration: none;
+   background-color: #EDC384;
+   border-radius: 4px;
+ }
+
+ .newButton{
+   width: 80px;
+   height: 20px;
+   margin-right: 12px;
+   padding: 4px;
+   text-decoration: none;
+   background-color: #EDC384;
+   border-radius: 4px;
+ }
+
+ #scrap_shell_type{
+   width: 132px;
+ }
+
+ #add_scrap {
+   margin-top: 20px;
  }
