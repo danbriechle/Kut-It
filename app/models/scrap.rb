@@ -1,4 +1,5 @@
 class Scrap < ApplicationRecord
+
   validates_presence_of :species,
                         :shell_type,
                         :length,
@@ -7,4 +8,5 @@ class Scrap < ApplicationRecord
   belongs_to :user
 
   enum shell_type: [:ply, :steam]
+  
 end

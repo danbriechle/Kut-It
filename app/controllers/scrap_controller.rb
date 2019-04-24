@@ -27,4 +27,5 @@ class ScrapController < ApplicationController
   def scrap_params
     params.require(:scrap).permit(:length, :width, :thickness, :species, :shell_type)
   end
+  
 end

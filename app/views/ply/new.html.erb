@@ -8,6 +8,7 @@
     <div><%= link_to 'Solid Shell Calculator', "/solid/new", class: 'navButton' %></div>
   </div>
 </nav>
+
 <section>
   <div class="form">
     <h1>Ply Shell Cut Size Calculator</h1>
@@ -18,20 +19,21 @@
       <li><%= f.text_field :thickness, placeholder: "Thickness"%></li>
       <li><%= f.number_field :slop, placeholder: "Slop %"%></li>
       <li><%= f.submit 'Calculate', class: 'newButton'%></li>
-    <% end %>
-    <div class="list_submit">
-      <% unless @ply.nil? %>
-      <p>Your dimensions are: <%=@ply.length%>"x<%=@ply.width%>"</p>
-      <%= button_to( "Add to cut list", :action => "create",
-                                        shell_type: :ply,
-                                        length: @ply.length ,
-                                        height: @ply.width,
-                                        drumsize: @ply.size,
-                                        thickness: @ply.thickness,
-                                        species: @ply.species,
-                                        scarf_angle: "90",
-                                        :controller => "cut")  %>
       <% end %>
-    </div>
+
+      <div class="list_submit">
+        <% unless @ply.nil? %>
+        <p>Your dimensions are: <%=@ply.length%>"x<%=@ply.width%>"</p>
+        <%= button_to( "Add to cut list", :action => "create",
+                                          shell_type: :ply,
+                                          length: @ply.length ,
+                                          height: @ply.width,
+                                          drumsize: @ply.size,
+                                          thickness: @ply.thickness,
+                                          species: @ply.species,
+                                          scarf_angle: "90",
+                                          :controller => "cut")  %>
+        <% end %>
+      </div>
     </div>
 </section>

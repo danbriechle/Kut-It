@@ -9,6 +9,7 @@
     <div><%= link_to 'Ply Shell Calculator', "/ply/new", class: 'navButton' %></div>
   </div>
 </nav>
+
 <section>
   <div class="form">
     <h1>Scrap Bin</h1>
@@ -20,6 +21,5 @@
       <li><%= f.select(:shell_type, [['Ply', 'ply'], ['Solid', 'steam']]) %></li>
       <li><%= f.submit 'Add Scrap', class: 'newButton'%></li>
     <% end %>
-    <div class="list_submit">
-
+  </div>
 </section>

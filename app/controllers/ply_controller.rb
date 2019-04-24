@@ -1,4 +1,5 @@
 class PlyController < ApplicationController
+  
   def new
     @current_user = current_user
   end
@@ -14,4 +15,5 @@ class PlyController < ApplicationController
   def ply_params
     params.require(:ply).permit(:diameter, :depth, :species, :thickness, :slop)
   end
+
 end

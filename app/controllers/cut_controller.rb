@@ -1,5 +1,4 @@
 class CutController < ApplicationController
-
   def create
     @current_user = current_user
     cut = current_user.cuts.create(cut_params)
