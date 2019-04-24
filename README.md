@@ -3,7 +3,7 @@
 <img width="1407" alt="Screen Shot 2019-04-24 at 3 37 47 PM" src="https://user-images.githubusercontent.com/42418816/56695828-3ff36c80-66a7-11e9-8e21-b42fe60296f1.png">
 
 Kut it is a cut calculator for drum makers that calculates cut sizes for ply and solid drum shells. Once you calculate a 
-cut, you can store the cut in you cut list. There is also a "scrap bin" where you can log scraps from cuts. Stay sharp with 
+cut, you can store the cut in your cut list. There is also a "scrap bin" where you can log scraps from cuts. Stay sharp with 
 Kut it! 
 
 ## Features:
